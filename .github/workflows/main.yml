@@ -1,0 +1,14 @@
+name: Claim Credits
+
+on:
+  schedule:
+    - cron: "* */3 * * *"
+  workflow_dispatch:
+jobs:
+  update_server:
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - run: "./run.sh"
+        env:
+          TOKEN: "${{ secrets.TOKEN }}"
