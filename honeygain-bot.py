@@ -24,11 +24,5 @@ def main():
     r = requests.post(url=api_url, headers=headers)
     print(f": {r.text}")
 
-
-while True:
-    print(f"Bot ran on {datetime.datetime.now()}", end="")
-    try:
-        main()
-    except:
-        print("Some sort of error occoured!")
-    sleep(60 * 60 * 2)  # Every 2 hours
+main()
+print(f"Bot ran on {datetime.datetime.now()}")
