@@ -2,7 +2,7 @@ name: Claim Credits
 
 on:
   schedule:
-    - cron: "* */3 * * *"
+    - cron: "* */6 * * *"
   workflow_dispatch:
 jobs:
   update_server:
